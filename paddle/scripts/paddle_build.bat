@@ -93,6 +93,7 @@ git config --global core.longpaths true
 
 rem ------initialize the python environment------
 set PYTHON_VENV_ROOT=%cache_dir%\python_venv
+rmdir %PYTHON_VENV_ROOT% /s /q
 set PYTHON_EXECUTABLE=!PYTHON_VENV_ROOT!\Scripts\python.exe
 %PYTHON_ROOT%\python.exe -m venv --clear !PYTHON_VENV_ROOT!
 call !PYTHON_VENV_ROOT!\Scripts\activate.bat
